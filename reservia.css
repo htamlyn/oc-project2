@@ -1,11 +1,13 @@
 body{
     font-family: "Raleway", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 #mainNavbar{
     display: flex;
     align-items: center;
-    padding: 0.5em;
+    padding: 0.5em 0.5em 0.5em 2em;
 }
 
 #logo{
@@ -51,10 +53,10 @@ h1{
 }
 
 main{
-    padding: 0.5em;
+    padding-left: 2em;
 }
 
-main div{
+#dt{
     font-weight: 300;
 }
 form{
@@ -63,15 +65,13 @@ form{
     align-items: center;
     padding: 0;
     width: 27rem;
-    /* border: 0.5px solid grey; */
     border-radius: 7px;
 }
 
 form i{
-    /* margin: 0; */
     padding: 10px;
     border-radius: 7px 0 0 7px;
-    background-color: #e1e2e4;
+    background-color: #f2f2f2;
     width: 7%;
     float: left;
     text-align: center;
@@ -79,7 +79,6 @@ form i{
 }
 
 form input{
-    /* margin:  0; */
     padding: 10px;
     border-top:0.3px solid grey ;
     border-bottom: 0.3px solid grey ;
@@ -91,7 +90,6 @@ form input{
 }
 
 form button{
-    /* margin: 0; */
     width: 23%;
     padding: 10px;
     border: none;
@@ -100,8 +98,200 @@ form button{
     color: white;
     font-size: 1.2rem;
     float: left;
+    cursor: pointer;
 }
 
 form button:hover{
     background-color: #034bb8;
+}
+
+#filters{
+    display: flex;
+    max-width: 67%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#filters h3{
+    display: inline-block;
+    margin-right:0;
+    max-width: 20%;
+}
+
+.filterbtn{
+    display: inline-block;
+    border: 0.5px solid #c2c0c0;
+    border-radius: 2em;
+    padding: 0;
+    text-decoration: none;
+    transition: ease-out 0.3s;
+}
+
+.filterbtn span{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 0.4em 0.7em;
+}
+
+.filterbtn i{
+    background-color: #deebff;
+    color: #0065FC;
+    padding:0.8em;
+    border-radius: 2em;
+    font-size: 18px;
+}
+
+.filterbtn:hover{
+    background-color: #deebff;
+    transition: 0.7s;
+}
+
+.info i{
+    color: #0065FC;
+    border: 0.3px solid #c2c0c0;
+    border-radius: 60%;
+    padding: 0.3em 0.6em;
+    margin-right: 1em;
+}
+
+.info{
+    margin-top: 2em;
+    font-weight: 300;
+}
+
+#acomm{
+    display: flex;
+    justify-content: space-between;
+}
+
+#Acommodations{
+    background-color: #f2f2f2;
+    border-radius: 2em;
+    padding: 1.8em;
+    width: 60%;
+    margin: 2em 0 2em 0;
+}
+
+#show{
+    margin-top: 3em;
+}
+
+#mostPop{
+    background-color: #f2f2f2;
+    border-radius: 2em;
+    padding: 2em;
+    width: 30%;
+    margin: 2em;
+}
+
+#mpHead{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mpHead i{
+    font-size: 28px;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.accomCard{
+    width: 30%;
+    height: 250px;
+    padding: 0.3em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 2em;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.accomCard img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 2em 2em 0 0;
+}
+
+.cardInfo h3{
+    margin: 0;
+}
+
+.cardInfo{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.3em 0.6em 0.5em 0.5em;
+}
+
+.mpCards{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mpCard{
+    width: 95%;
+    height: 180px;
+    padding: 0.3em;
+    margin: 1em 0.8em;
+    border: none;
+    border-radius: 2em;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    display: flex;
+}
+
+.mpCard img{
+    width: 40%;
+    border-radius: 2em 0 0 2em;
+    object-fit: cover;
+}
+
+.mpCardInfo{
+    width: 55%;
+    margin: 1em ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.on{
+    color: #0065FC;
+}
+
+.off{
+    color:#f2f2f2;
+}
+
+
+
+
+footer{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footsec{
+    margin: 0.5em 0.5em 0.5em 2em;
+    flex-grow: 4;
+}
+
+.footsec div, .footsec h4{
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
