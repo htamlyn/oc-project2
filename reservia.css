@@ -2,6 +2,8 @@ body{
     font-family: "Raleway", sans-serif;
     padding: 0;
     margin: 0;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 #mainNavbar{
@@ -115,8 +117,8 @@ form{
 }
 
 .map{
-    padding: 0.65em;
-    border-radius: 7px 0 0 7px;
+    padding: 12px;
+    border-radius: 8px 0 0 8px;
     background-color: #f2f2f2;
     width: 7%;
     height: 1em;
@@ -127,7 +129,7 @@ form{
 
 
 form input{
-    padding: 13px;
+    padding: 11px;
     border-top:0.3px solid #f2f2f2 ;
     border-bottom: 0.3px solid #f2f2f2;
     border-left: none;
@@ -135,6 +137,8 @@ form input{
     width: 70%;
     height:1.2em;
     float: left;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 
@@ -142,12 +146,13 @@ form button{
     width: 23%;
     padding: 11px;
     border: none;
-    border-radius: 0 7px 7px 0;
+    border-radius: 0 8px 8px 0;
     background-color: #0065FC;
     color: white;
     font-size: 1.2em;
     float: left;
     cursor: pointer;
+    outline: none;
 }
 
 .icon{
@@ -168,13 +173,13 @@ form button:hover{
         width: 21em;
     }
     .map{
-        font-size: 1.1em;
+        font-size: 1em;
     }
     form button{
         font-size: 1em;
     }
     form input{
-        height: 0.9em;
+        height: 1em;
     }
 }
 
@@ -227,6 +232,9 @@ form button:hover{
     text-decoration: none;
     transition: ease-out 0.3s;
     margin-right:0.5em;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
 .filterbtn div{
@@ -236,6 +244,8 @@ form button:hover{
     display: inline-block;
     margin-left: 0.5em;
     text-align: center;
+    transition: ease-out 0.5s;
+    transition-delay: 0.2s;
 }
 
 .filterbtn i{
@@ -244,28 +254,72 @@ form button:hover{
     padding:0.8em;
     border-radius: 2em;
     font-size: 18px;
+    transition: ease-out 0.4s;
 }
 
 #lc{
     width: 16%;
 }
 
+#lc:hover i{
+    transform: translateX(5.9em);
+    transition: 0.6s;
+    transition-delay: 0.1s;
+}
+
 #ff{
     width: 22%;
+}
+
+#ff:hover i{
+    transform: translateX(9.2em);
+    transition: 0.6s;
+    transition-delay: 0.1s;
 }
 
 #rom{
     width: 16%;
 }
 
+#rom:hover i{
+    transform: translateX(6.2em);
+    transition: 0.6s;
+    transition-delay: 0.1s;
+}
+
 #pa{
     width: 20%;
 }
 
-.filterbtn:hover{
-    background-color: #deebff;
-    transition: 0.7s;
+#pa:hover i{
+    transform: translateX(8.2em);
+    transition: 0.6s;
+    transition-delay: 0.1s;
 }
+
+.filterbtn:hover div{
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.filterbtn::after {
+    position: absolute;
+    content: '';
+    top:0;
+    left:0;
+    width: 0;
+    height: 100%;
+    border-radius: 2em;
+    background-color: #deebff;
+    transform-origin:left;
+    transition:width 0.7s ease;
+    z-index:-1;
+  }
+  
+  .filterbtn:hover::after {
+    width: 100%;
+    border-radius: 2em;
+  }
 
 @media screen and (max-width:1400px){
     .filterbtn div{
@@ -526,6 +580,21 @@ form button:hover{
         width: 100%;
         box-sizing: border-box;
     }
+    .accomCard{
+        border-radius: 1em;
+    }
+    .accomCard img{
+        border-radius: 1em 1em 0 0;
+    }
+    .accomCardInfo h3{
+        font-size: 1em;
+    }
+    .accomCardInfo div{
+        font-size: 0.8em;
+    }
+    #show{
+        margin-top: 2em;
+    }
 }
 
 @media screen and (max-width:640px){
@@ -573,16 +642,44 @@ form button:hover{
     .mpCardInfo div{
         font-size: 0.8em;
     }
+    #Acommodations{
+        order: 2;
+        width: 100%;
+        box-sizing: border-box;
+        background: none;
+        padding: 0em 1em 0em 1em;
+        margin: 0;
+    }
+    .cards{
+        flex-direction: column;
+    }
+    .accomCard{
+        width: 95%;
+        height: 180px;
+        border-radius: 1em;
+        box-shadow: 5px 5px 5px#f2f2f2;
+    }
+    .accomCard img{
+        border-radius: 1em 1em 0 0;
+    }
+    .accomCardInfo h3{
+        font-size: 1em;
+    }
+    .accomCardInfo div{
+        font-size: 0.9em;
+    }
     .star{
         font-size: 0.7em;
     }
-    #Acommodations{
-        order: 2;
+    #show{
+        margin-top: 2em;
+        margin-left: 0.5em;
+        font-size: 1em;
     }
 }
 
 #activs{
-    margin-bottom: 3em;
+    margin: 2em 0 3em 0;
 }
 
 #activCards{
@@ -595,7 +692,7 @@ form button:hover{
 
 .activCard{
     margin: 2em 2em 0 0;
-    max-width: 22%;
+    width: 22%;
     text-decoration: none;
     color: black;
     font-size: 18px;
@@ -643,10 +740,90 @@ form button:hover{
     object-fit: cover;
 }
 
+
+@media screen and (max-width:1008px) and (min-width:641px){
+    #activCards{
+        max-height: 20em;
+    }
+    .activCard{
+        width: 20%;
+        border-radius: 1em;
+    }
+    .activCard div{
+        margin: 0.5em 0 0 1em;
+        width: 80%;
+        height: 18px;
+        font-size: 0.7em;
+    }
+    .tall{
+        height: 16em;
+    }
+    .tall img{
+        border-radius: 1em 1em 0 0;
+        height: 80%;
+    }
+    .medium{
+        height: 8em;
+    }
+    .medium img{
+        border-radius: 1em 1em 0 0;
+        height: 70%;
+    }
+    .small{
+        margin: 1.6em 2em 0 0;
+        height: 6em;
+    }
+    .small img{
+        border-radius: 1em 1em 0 0;
+        height: 62%;
+    }
+}
+
+@media screen and (max-width:640px){
+    #activs{
+        margin: 2em 0 2em 0;
+        padding: 0 1em 0 1em;
+    }
+    #activs h2{
+        font-size: 1.2em;
+        margin-bottom: 0;
+    }
+    #activCards{
+        flex-wrap: nowrap;
+        max-height: none;
+    }
+    .activCard{
+        width:95%;
+        border-radius: 1em;
+    }
+    .activCard div{
+        margin: 1em 0 0 1em;
+        font-size: 0.9em;
+    }
+    .tall{
+        height: 12em;
+    }
+    .tall img{
+        height: 70%;
+        border-radius: 1em 1em 0 0;
+    }
+    .medium{
+        height: 12em;
+    }
+    .medium img{
+        height: 70%;
+        border-radius: 1em 1em 0 0;
+    }
+    .small img{
+        border-radius: 1em 1em 0 0;
+    }
+}
+
 footer{
     background-color: #f2f2f2;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .footsec{
@@ -654,7 +831,29 @@ footer{
     flex-grow: 4;
 }
 
+.footsec a{
+    color: black;
+    text-decoration: none;
+}
+
+.footsec a:hover{
+    color: #0065FC;
+}
+
 .footsec div, .footsec h4{
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+@media screen and (max-width:640px){
+    footer{
+        flex-direction: column;
+    }
+    .footsec{
+        margin: 0.7em 1em 0.7em 1em;
+    }
+    .footsec div, .footsec h4{
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+    }
 }
