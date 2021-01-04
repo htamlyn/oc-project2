@@ -2,8 +2,6 @@ body{
     font-family: "Raleway", sans-serif;
     padding: 0;
     margin: 0;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 #mainNavbar{
@@ -16,25 +14,25 @@ body{
     flex-grow: 9;
 }
 
-#acomms{
+#acomms_link{
     text-align: center;
     text-decoration: none;
     color: #0065FC;
     flex-grow: 1;
 }
 
-#acomms:hover{
+#acomms_link:hover{
     color: #0547ac;
 }
 
-#activities{
+#activities_link{
     text-align: center;
     text-decoration: none;
     color: #85878a;
     flex-grow: 1;
 }
 
-#activities:hover{
+#activities_link:hover{
     color: #414142;
 }
 
@@ -59,7 +57,7 @@ body{
         width: 50%;
         padding: 0.25em 1em 0.25em 1em;
     }
-    #acomms{
+    #acomms_link{
         width: 50%;
         order: 1;
         padding: 0.25em 0 0.5em 0;
@@ -67,17 +65,17 @@ body{
         margin: 0;
         font-size: 14px;
     }
-    #acomms:hover{
+    #acomms_link:hover{
         border-bottom: 3px solid #0065fc;
     }
-    #activities{
+    #activities_link{
         width: 50%;
         order: 2;
         padding: 0.25em 0 0.5em 0;
         border-bottom: 3px solid #f2f2f2;
         font-size: 14px;
     }
-    #activities:hover{
+    #activities_link:hover{
         border-bottom: 3px solid #0065fc;
     }
     #signUp{
@@ -395,12 +393,12 @@ form button:hover{
     }
 }
 
-#acomm{
+#acomm_section{
     display: flex;
     justify-content: space-between;
 }
 
-#Acommodations{
+#acommodations{
     background-color: #f2f2f2;
     border-radius: 2em;
     padding: 1.8em;
@@ -525,7 +523,7 @@ form button:hover{
 }
 
 @media screen and (max-width:1008px) and (min-width:641px){
-    #acomm{
+    #acomm_section{
         display: inline-flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -575,7 +573,7 @@ form button:hover{
     .star{
         font-size: 1em;
     }
-    #Acommodations{
+    #acommodations{
         order: 2;
         width: 100%;
         box-sizing: border-box;
@@ -598,13 +596,13 @@ form button:hover{
 }
 
 @media screen and (max-width:640px){
-    #acomm{
+    #acomm_section{
         display: inline-flex;
         flex-direction: column;
         flex-wrap: wrap;
         margin-left: 0;
     }
-    #acomm h2{
+    #acomm_section h2{
         font-size: 1.2em;
     }
     #mpHead i{
@@ -642,7 +640,7 @@ form button:hover{
     .mpCardInfo div{
         font-size: 0.8em;
     }
-    #Acommodations{
+    #acommodations{
         order: 2;
         width: 100%;
         box-sizing: border-box;
@@ -678,7 +676,7 @@ form button:hover{
     }
 }
 
-#activs{
+#activities{
     margin: 2em 0 3em 0;
 }
 
@@ -780,7 +778,7 @@ form button:hover{
 }
 
 @media screen and (max-width:640px){
-    #activs{
+    #activities{
         margin: 2em 0 2em 0;
         padding: 0 1em 0 1em;
     }
